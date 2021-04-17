@@ -1,0 +1,44 @@
+version: '3.6'
+services:
+  caddy:
+    image: caddy
+    container_name: breakwall_caddy2
+    restart: always
+    networks:
+      breakwall:
+        aliases:
+          - caddy
+    dns:
+      - 8.8.8.8
+      - 208.67.222.222
+    ports:
+      - "80:80"
+  #    - "443:443"
+    volumes:
+      - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+      - ./caddy/caddy_cert:/data/caddy/certificates/acme-v02.api.letsencrypt.org-directory
+      - ./caddy/caddy_config:/config
+      - ./caddy/www:/usr/share/caddy/
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+
+  xray:
+    image: teddysun/xray
+    container_name: breakwall_xray
+    restart: always
+    volumes:
+      - ./xray/config.json:/etc/xray/config.json
+      - ./caddy/caddy_cert:/cert
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+    ports:
+      - "443:443"
+    depends_on: 
+      - caddy
+    networks:
+      breakwall:
+        aliases:
+          - xray
+
+networks:
+    breakwall:

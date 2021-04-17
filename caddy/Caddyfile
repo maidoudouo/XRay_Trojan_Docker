@@ -1,0 +1,7 @@
+abc.com {
+}
+
+:81 {
+    root * /usr/share/caddy
+    file_server
+}
