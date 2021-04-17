@@ -111,18 +111,27 @@ git clone https://github.com/maidoudouo/V2ray_Trojan_Docker
 
 ```
 ./OneKeySet.sh
-Please input your server domain name(eg: abc.com): hello.com
-Your domain name is: hello.com
+Please input your server domain name(eg: abc.com): abc.com
+Your domain name is: abc.com
 -----------------------------------------------
 XRay Configuration:
-Server: hello.com
+
+VLESS:
+Server: abc.com
 Port: 443
-UUID: c084ca0d-1c12-4be3-9226-74b817be6a2f
+UUID: 3f977803-e015-4857-bc2e-1e5d5713dee6
+
+VMESS:
+AlterId: 64
+WebSocket Host: abc.com
+WebSocket Path: /ray
+TLS: True
+TLS Host: abc.com
 -----------------------------------------------
 Trojan Configuration:
-Server: hello.com
+Server: abc.com
 Port: 443
-Password: 74b817be6a2f
+Password: 1e5d5713dee6
 -----------------------------------------------
 Please run 'docker-compose up -d' to build!
 Enjoy it!
