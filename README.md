@@ -100,7 +100,7 @@ chmod +x tcp.sh
 ## 下载源码
 
 ```
-git clone https://github.com/maidoudouo/V2ray_Trojan_Docker
+git clone https://github.com/maidoudouo/XRay_Trojan_Docker
 ```
 
 ## Setting
@@ -142,7 +142,7 @@ Enjoy it!
 
 1、在./caddy/Caddyfile中修改Caddy修改域名
 
-2、在./xray/config.json中修改V2Ray的UUID
+2、在./xray/config.json中修改XRay的UUID
 
 3、在./xray/config.json中修改Trojan的密码和证书路径里面的域名（共4个地方）
 
