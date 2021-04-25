@@ -142,9 +142,9 @@ Enjoy it!
 
 1、在./caddy/Caddyfile中修改Caddy修改域名
 
-2、在./xray/config.json中修改XRay的UUID
+2、在./xray/config.json中修改VLESS和VMESS的UUID，还有修改Trojan的密码
 
-3、在./xray/config.json中修改Trojan的密码和证书路径里面的域名（共4个地方）
+3、在./xray/config.json中修改证书路径里面的域名（共4个地方）
 
 ## 构建
 ```
