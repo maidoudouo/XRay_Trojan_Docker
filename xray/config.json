@@ -36,6 +36,7 @@
                   ],
                   "certificates": [
                       {
+                          "ocspStapling": 300,
                           "certificateFile": "/cert/abc.com/abc.com.crt",
                           "keyFile": "/cert/abc.com/abc.com.key"
                       }
