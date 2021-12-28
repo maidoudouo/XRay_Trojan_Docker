@@ -2,6 +2,8 @@
 
 这个项目是用于快速地使用Docker搭建breakwall服务(Vless+Vmess+Trojan)
 
+当然你也可以移步去使用[XRay_Trojan_Naiveproxy_Docker](https://github.com/maidoudouo/XRay_Trojan_Naiveproxy_Docker)
+
 ### 证书
 
 ```
